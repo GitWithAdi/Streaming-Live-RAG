@@ -220,11 +220,26 @@ Streaming-Live-RAG/
 
 ---
 
-## 7. Submission Checklist Verification
+## 7. Submission Checklist & Deliverable Links
 
-- [x] **Reproducible Repository**: Source code, pinned dependency lockfile (`requirements.txt`), environment config template (`.env.example`), single-command runners (`docker compose up`, `run.ps1`, `run.sh`).
+| Deliverable | Location / Resource Link | Verification Status |
+| :--- | :--- | :---: |
+| **Public GitHub Repository** | [GitWithAdi/Streaming-Live-RAG](https://github.com/GitWithAdi/Streaming-Live-RAG) | **VERIFIED** |
+| **Official Release Tag** | [`PRISM_GENAI_HACKATHON_Y2026`](https://github.com/GitWithAdi/Streaming-Live-RAG/tree/PRISM_GENAI_HACKATHON_Y2026) | **VERIFIED** |
+| **Demonstration Video (<= 5 min)** | [Google Drive Video Folder](https://drive.google.com/drive/folders/1ESU7GciUw4PzpmSpQ577GnLWuoR0X458?usp=sharing) | **VERIFIED** |
+| **Presentation Slide Deck** | [`VITVellore_SlightlyHallucinating_Submission.pptx`](./VITVellore_SlightlyHallucinating_Submission.pptx) | **VERIFIED** |
+| **Language AI Disclosure Document** | [`LangAI3.0_AI_Disclosure.docx`](./LangAI3.0_AI_Disclosure.docx) | **VERIFIED** |
+| **System Architecture Brief** | [`docs/System_Architecture_Brief.md`](./docs/System_Architecture_Brief.md) | **VERIFIED** |
+| **Benchmarking & Evaluation Report** | [`docs/Benchmarking_Evaluation_Report.md`](./docs/Benchmarking_Evaluation_Report.md) | **VERIFIED** |
+| **Telemetry & Observability Schema** | [`docs/Telemetry_Observability_Schema.md`](./docs/Telemetry_Observability_Schema.md) | **VERIFIED** |
+| **Video Demonstration Script** | [`docs/Video_Demonstration_Script.md`](./docs/Video_Demonstration_Script.md) | **VERIFIED** |
+| **Evaluation Gates (G1–G6)** | Automated benchmark runner (100% Pass across all 6 gates) | **ALL PASSED** |
+
+- [x] **Reproducible Repository**: Source code, pinned dependency lockfile (`requirements.txt`), environment config template (`.env.example`), single-command runners (`docker compose up`, `run.ps1`, `run.sh`, `Makefile`).
 - [x] **System Architecture Brief (<= 6 pages)**: Comprehensive design document in `docs/System_Architecture_Brief.md`.
 - [x] **Benchmarking & Evaluation Report**: Detailed performance report with 3 edge-case analyses and 2 architectural ablation experiments in `docs/Benchmarking_Evaluation_Report.md`.
-- [x] **System Demonstration Video Script (<= 5 minutes)**: Full walkthrough script and storyboard in `docs/Video_Demonstration_Script.md`.
+- [x] **System Demonstration Video**: Video link in Google Drive with complete minute-by-minute script in `docs/Video_Demonstration_Script.md`.
 - [x] **Telemetry & Observability Schema**: Structured logs specification conforming to Page 4 in `docs/Telemetry_Observability_Schema.md`.
+- [x] **AI Usage Disclosure**: Fully filled official disclosure form in `LangAI3.0_AI_Disclosure.docx`.
 - [x] **Evaluation Gates**: 100% Pass across Gates G1, G2, G3, G4, G5, and G6.
+
