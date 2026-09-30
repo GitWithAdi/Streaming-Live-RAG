@@ -9,6 +9,14 @@ import sys
 import json
 import time
 from typing import Dict, Any, List, Tuple
+
+# Fix: Ensure UTF-8 output on Windows terminals for symbols like §
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 from streaming_rag.pipeline import StreamingLiveRAGEngine
 from streaming_rag.schemas import TranscriptChunk, StructuredOutputRecord
 from streaming_rag.synthesizer.grounding import GroundingVerifier

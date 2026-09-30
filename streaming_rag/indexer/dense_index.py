@@ -27,6 +27,12 @@ class DenseIndex:
 
         if not self.use_fallback:
             try:
+                import os
+                # Prefer local offline cache to eliminate unauthenticated HF Hub network warnings
+                local_cache = os.path.expanduser(f"~/.cache/huggingface/hub/models--sentence-transformers--{self.model_name}")
+                if os.path.exists(local_cache):
+                    os.environ["HF_HUB_OFFLINE"] = "1"
+
                 from sentence_transformers import SentenceTransformer
                 if self.model_name not in _MODEL_CACHE:
                     _MODEL_CACHE[self.model_name] = SentenceTransformer(self.model_name)
