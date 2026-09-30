@@ -1,0 +1,51 @@
+[
+  {
+    "doc_id": "Doc_12",
+    "section": "§2",
+    "title": "Pune Regional Workshop Venues and Capacity Specifications",
+    "text": "For corporate customer workshops in Pune accommodating 30 attendees, documented options include Venue A (Kalyani Nagar Conference Hall) and Venue B (Shivaji Nagar Executive Center). Venue A provides a workshop capacity of 30 to 45 delegates in modular U-shape and classroom seating configurations, complete with dual projection systems and interactive audio-visual staging. Venue B supports up to 50 delegates with standard boardroom arrangements.",
+    "metadata": { "category": "venue_capacity", "location": "Pune", "capacity": 30 }
+  },
+  {
+    "doc_id": "Doc_12",
+    "section": "§1",
+    "title": "Mumbai Event Venues Overview",
+    "text": "Corporate facilities in Mumbai include Grand Central BKC and Bandra Executive Suites with capacities ranging from 20 to 100 people. Booking must be completed 14 business days in advance.",
+    "metadata": { "category": "venue_capacity", "location": "Mumbai", "capacity": 50 }
+  },
+  {
+    "doc_id": "Doc_31",
+    "section": "§4",
+    "title": "Cancellation Policy and Refund Terms for Pune Partner Venues",
+    "text": "Cancellation terms for contracted workshop venues in Pune require written notification at least 5 business days prior to the event date to qualify for an 80% refund of deposit. Cancellations between 48 hours and 5 days incur a 50% cancellation fee, while cancellations within 48 hours are non-refundable. Force majeure claims require division head authorization.",
+    "metadata": { "category": "cancellation_policy", "location": "Pune" }
+  },
+  {
+    "doc_id": "Doc_31",
+    "section": "§1",
+    "title": "Standard Corporate Contracting and General Cancellation Provisions",
+    "text": "All vendor contracts are subject to enterprise procurement terms. Cancellations made prior to contract finalization incur no penalty. Standard procurement clauses require vendor compliance with ISO 27001.",
+    "metadata": { "category": "cancellation_policy", "location": "General" }
+  },
+  {
+    "doc_id": "Doc_09",
+    "section": "§1",
+    "title": "Catering Service Options and Meal Packages for Pune Workshops",
+    "text": "Pune corporate event packages include tier-1 on-site catering options with morning breakfast, working lunch buffet (vegetarian and non-vegetarian selections), and continuous coffee/tea refreshment stations. External catering partners may be onboarded with a 72-hour food safety certification check. Note that custom dietary accommodations and overnight accommodation packages are not covered under standard catering contracts.",
+    "metadata": { "category": "catering", "location": "Pune" }
+  },
+  {
+    "doc_id": "Doc_04",
+    "section": "§3",
+    "title": "IT Equipment & AV Rental Guidelines",
+    "text": "High-definition projectors, boundary microphones, and dedicated Wi-Fi access points are provisioned by the facilities operations team. Additional requirements for streaming live broadcasts must be requested 48 hours in advance.",
+    "metadata": { "category": "it_equipment" }
+  },
+  {
+    "doc_id": "Doc_15",
+    "section": "§2",
+    "title": "Transportation and Airport Shuttles for Pune Events",
+    "text": "Designated cab aggregators provide hourly airport shuttles between Pune International Airport and partner hotels. Requests must be batched by the travel coordinator.",
+    "metadata": { "category": "logistics", "location": "Pune" }
+  }
+]

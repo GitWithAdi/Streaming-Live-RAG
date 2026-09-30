@@ -1,0 +1,30 @@
+[
+  {
+    "doc_id": "Doc_05",
+    "section": "§1",
+    "title": "Domestic Employee Travel Reimbursement Policy",
+    "text": "The standard travel reimbursement rule covers economy airfare, lodging within company-approved per-diem limits, and standard meal allowances for employee trips. All expense claims must be filed through the corporate finance portal within 30 days of trip conclusion with digitized tax invoices.",
+    "metadata": { "category": "travel_reimbursement", "domain": "domestic" }
+  },
+  {
+    "doc_id": "Doc_05",
+    "section": "§3",
+    "title": "Post-Travel and Late Booking Exception Policy",
+    "text": "Reservations must normally be booked at least 14 days in advance via the self-service travel desk. In cases where bookings are made after travel has commenced or retroactive ticket issuance occurs, the late-booking exception requires senior director approval alongside formal justification of business exigency.",
+    "metadata": { "category": "travel_exception", "domain": "late_booking" }
+  },
+  {
+    "doc_id": "Doc_07",
+    "section": "§2",
+    "title": "International Travel and Foreign Currency Expense Guidelines",
+    "text": "For international employee travel, the standard reimbursement rule still applies to base accommodations and fares. However, international travel introduces a mandatory foreign currency receipt verification requirement, requiring conversion slips or credit card statements indicating the prevailing exchange rate on the transaction date.",
+    "metadata": { "category": "travel_reimbursement", "domain": "international" }
+  },
+  {
+    "doc_id": "Doc_07",
+    "section": "§5",
+    "title": "Visa and Passport Processing Fees",
+    "text": "Expedited visa processing, embassy consular fees, and mandatory travel health insurance are 100% reimbursable for verified overseas client assignments.",
+    "metadata": { "category": "travel_reimbursement", "domain": "visa" }
+  }
+]

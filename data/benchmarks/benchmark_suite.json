@@ -1,0 +1,95 @@
+{
+  "test_cases": [
+    {
+      "id": "TC_01_INCREMENTAL_MULTI_INTENT",
+      "name": "Incremental Multi-Intent Stream (Example 1)",
+      "corpus_path": "data/corpus/venue_booking_corpus.json",
+      "type": "streaming_multi_intent",
+      "stream_chunks": [
+        { "timestamp_s": 0.0, "text": "I need to plan a customer workshop in...", "expected_action": "wait" },
+        { "timestamp_s": 0.8, "text": "...Pune for 30 people, and I need...", "expected_action": "retrieve", "expected_trigger": "provisional", "expected_query": "Pune workshop venue capacity 30" },
+        { "timestamp_s": 1.6, "text": "...the cancellation policy and the catering options.", "expected_action": "retrieve", "expected_trigger": "multi_intent" },
+        { "timestamp_s": 2.1, "text": "", "is_final": true, "expected_action": "synthesize" }
+      ],
+      "expected_sub_intents_count": 3,
+      "expected_citations": ["Doc_12 §2", "Doc_31 §4", "Doc_09 §1"],
+      "expected_uncertainty_keywords": ["accommodation"]
+    },
+    {
+      "id": "TC_02_LATE_ARRIVING_DETAIL",
+      "name": "Late-Arriving Detail Refinement (Example 2)",
+      "corpus_path": "data/corpus/travel_reimbursement_corpus.json",
+      "type": "multi_turn_refinement",
+      "turns": [
+        {
+          "turn_id": 1,
+          "stream_chunks": [
+            { "timestamp_s": 0.0, "text": "Summarize the travel reimbursement rule...", "expected_action": "wait" },
+            { "timestamp_s": 0.9, "text": "...for an employee trip.", "is_final": true, "expected_action": "retrieve" }
+          ],
+          "expected_version": 1,
+          "expected_citations": ["Doc_05 §1"]
+        },
+        {
+          "turn_id": 2,
+          "stream_chunks": [
+            { "timestamp_s": 0.0, "text": "The trip was international and the booking was made after travel.", "is_final": true, "expected_action": "retrieve" }
+          ],
+          "is_late_constraint": true,
+          "expected_version": 2,
+          "expected_trigger": "delta_refinement",
+          "expected_citations": ["Doc_05 §1", "Doc_05 §3", "Doc_07 §2"],
+          "forbidden_restart": true
+        }
+      ]
+    },
+    {
+      "id": "TC_03_QUERY_SUPPRESSION",
+      "name": "Presentation Query Suppression (Example 3)",
+      "corpus_path": "data/corpus/travel_reimbursement_corpus.json",
+      "type": "query_suppression",
+      "turns": [
+        {
+          "turn_id": 1,
+          "stream_chunks": [
+            { "timestamp_s": 0.0, "text": "Summarize the travel reimbursement rule for an employee trip.", "is_final": true, "expected_action": "retrieve" }
+          ],
+          "expected_version": 1
+        },
+        {
+          "turn_id": 2,
+          "stream_chunks": [
+            { "timestamp_s": 0.0, "text": "Please repeat your last answer in two bullets.", "is_final": true, "expected_action": "no_retrieval" }
+          ],
+          "expected_action": "no_retrieval",
+          "expected_reason": "presentation_restructure",
+          "expected_citations": ["Doc_05 §1"]
+        }
+      ]
+    },
+    {
+      "id": "TC_04_UNCERTAINTY_VERIFICATION",
+      "name": "Uncertainty Indicator for Missing Sub-Intent",
+      "corpus_path": "data/corpus/venue_booking_corpus.json",
+      "type": "streaming_multi_intent",
+      "stream_chunks": [
+        { "timestamp_s": 0.0, "text": "I need workshop venue options in Pune for 30 attendees and...", "expected_action": "retrieve", "expected_trigger": "provisional" },
+        { "timestamp_s": 1.4, "text": "...the catering accommodation policies for Venue A.", "is_final": true, "expected_action": "retrieve" }
+      ],
+      "expected_citations": ["Doc_12 §2"],
+      "expected_uncertainty": true
+    },
+    {
+      "id": "TC_05_NOISE_SUPPRESSION",
+      "name": "Eager Retrieval Suppression on Incomplete Noise",
+      "corpus_path": "data/corpus/venue_booking_corpus.json",
+      "type": "noise_filtering",
+      "stream_chunks": [
+        { "timestamp_s": 0.0, "text": "Uh, hello...", "expected_action": "wait" },
+        { "timestamp_s": 0.5, "text": "...can you check something for me...", "expected_action": "wait" },
+        { "timestamp_s": 1.0, "text": "...if you have time...", "expected_action": "wait" },
+        { "timestamp_s": 1.8, "text": "...regarding...", "expected_action": "wait" }
+      ]
+    }
+  ]
+}
